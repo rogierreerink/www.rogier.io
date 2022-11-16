@@ -9,15 +9,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: latest
-      - name: Set up cache
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-www.rogier.io-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-www.rogier.io-
+          node-version: 18
+          cache: npm
       - name: Install dependencies
         run: npm install
       - name: Run linter
