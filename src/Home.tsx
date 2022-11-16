@@ -6,7 +6,9 @@ export default function Home() {
             <div className="hero-body">
                 <div className="container has-text-centered">
                     <figure>
-                        <img src={process.env.PUBLIC_URL + '/assets/logo.svg'} />
+                        <img
+                            src={process.env.PUBLIC_URL + '/assets/logo.svg'}
+                            alt='www.rogier.io' />
                     </figure>
                 </div>
             </div>
